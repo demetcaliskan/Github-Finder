@@ -24,12 +24,16 @@ class App extends Component {
 
   }
 
+  searchUsers = (text) => {
+
+  }
+
   render() {
     return (
       <div className="App">
         <Navbar />
         <div className="container">
-          <Search />
+          <Search searchUsers={this.searchUsers} />
           <Users loading={this.state.loading} users={this.state.users} />
         </div>
 
